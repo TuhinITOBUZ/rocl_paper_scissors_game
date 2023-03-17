@@ -43,6 +43,11 @@ document.addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
     rounds = document.getElementById("rounds").value;
     document.getElementById("rounds").value = null;
+    document.getElementById("rounds").style.display = "none"
+    document.getElementById("paper").style.display = "block";
+    document.getElementById("rock").style.display = "block";
+    document.getElementById("scissors").style.display = "block";
+    document.getElementById("warning").style.display = "none";
   }
 });
 
@@ -86,19 +91,20 @@ document.querySelector("#scissors").addEventListener("click", () => {
       alert("Game over. Please reset!");
     }
   }
-
 });
 
 document.getElementById("reset-button").addEventListener("click", () => {
   player = "";
   computer = "";
-  playerScore = 0;
-  computerScore = 0;
-  roundsPlayed = 0;
-  rounds = 0;
+  playerScore = computerScore = roundsPlayed = rounds = 0;
   document.getElementById("player-score").textContent = playerScore;
   document.getElementById("computer-score").textContent = computerScore;
   document.getElementById("result").innerHTML = "";
   document.getElementById("player").src = `./images/hand.svg`;
   document.getElementById("computer").src = `./images/hand.svg`;
+  document.getElementById("rounds").style.display = "block"
+  document.getElementById("paper").style.display = "none";
+  document.getElementById("rock").style.display = "none";
+  document.getElementById("scissors").style.display = "none";
+  document.getElementById("warning").style.display = "block";
 });

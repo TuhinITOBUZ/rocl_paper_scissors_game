@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-paper-scissor game</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Rock - Paper - Scissors</h1>
     <div class="page-label">
-      <label>Player vs Computer</label>
       <input
         type="number"
         name=""
         id="rounds"
-        placeholder="Enter the nuber of rounds you want to play"
+        placeholder="Enter the nuber of round"
       />
     </div>
     <section class="playground">
@@ -27,14 +36,15 @@
       <img src="./images/paper.svg" id="paper" alt="paper-logo" />
       <img src="./images/rock.svg" id="rock" alt="rock-logo" />
       <img src="./images/scissors.svg" id="scissors" alt="scissors-logo" />
+      <p id="warning">set number of rounds!</p>
     </section>
     <section class="score">
       <div>Player : <span id="player-score"> 0 </span></div>
       <div>Compuetr : <span id="computer-score"> 0 </span></div>
     </section>
     <div class="reset">
-      <button id="reset-button">Reset</button>
-      <h2 id="result"></h2>
+      <button class="button-49" id="reset-button">Reset</button>
+      <h2 id="result" class="animate-charcter"></h2>
     </div>
     <script src="js/main.js"></script>
   </body>

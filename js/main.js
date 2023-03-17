@@ -43,7 +43,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
     rounds = document.getElementById("rounds").value;
     document.getElementById("rounds").value = null;
-    document.getElementById("rounds").style.display = "none"
+    document.getElementById("rounds").style.display = "none";
     document.getElementById("paper").style.display = "block";
     document.getElementById("rock").style.display = "block";
     document.getElementById("scissors").style.display = "block";
@@ -102,7 +102,7 @@ document.getElementById("reset-button").addEventListener("click", () => {
   document.getElementById("result").innerHTML = "";
   document.getElementById("player").src = `./images/hand.svg`;
   document.getElementById("computer").src = `./images/hand.svg`;
-  document.getElementById("rounds").style.display = "block"
+  document.getElementById("rounds").style.display = "block";
   document.getElementById("paper").style.display = "none";
   document.getElementById("rock").style.display = "none";
   document.getElementById("scissors").style.display = "none";

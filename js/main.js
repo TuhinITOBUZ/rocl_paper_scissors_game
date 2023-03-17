@@ -41,13 +41,18 @@ function setValues(computer) {
 // on enter key
 document.addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
-    rounds = document.getElementById("rounds").value;
-    document.getElementById("rounds").value = null;
-    document.getElementById("rounds").style.display = "none";
-    document.getElementById("paper").style.display = "block";
-    document.getElementById("rock").style.display = "block";
-    document.getElementById("scissors").style.display = "block";
-    document.getElementById("warning").style.display = "none";
+    if (Number(document.getElementById("rounds").value)>0){
+      rounds = document.getElementById("rounds").value;
+      document.getElementById("rounds").value = null;
+      document.getElementById("rounds").style.display = "none";
+      document.getElementById("paper").style.display = "block";
+      document.getElementById("rock").style.display = "block";
+      document.getElementById("scissors").style.display = "block";
+      document.getElementById("warning").style.display = "none";
+    }
+    else{
+      alert("Enter a number greater than 0")
+    }
   }
 });
 
